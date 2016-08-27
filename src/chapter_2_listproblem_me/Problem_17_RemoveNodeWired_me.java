@@ -2,6 +2,7 @@ package chapter_2_listproblem_me;
 
 /**
  * Created by bigming on 16/8/27.
+ *
  * 题目: 给定一个链表中的节点node,但不给定头节点,要求删除node
  * 难度: *
  * 思路: 例如链表为1-2-3-4-null,要求删除3节点,那么只需要把3节点的值改为4,
