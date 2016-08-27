@@ -5,6 +5,14 @@ import java.util.Queue;
 
 /**
  * Created by bigming on 16/8/27.
+ *
+ * 题目: 将搜索二叉树转换成双向链表
+ * 难度: **
+ * 思路: 第一种方法是将二叉树采用中序遍历的方式放到队列中,然后对队列进行操作即可,时间空间
+ *      复杂度都是O(N)
+ *      第二种方法是递归,递归的时候要将双向链表转换为一种特殊形式,即尾节点的right指正指向
+ *      头节点,这样是为了方便查找到头尾指针.
+ *
  */
 public class Problem_15_BSTtoDoubleLinkedList_me {
     public static class Node{
@@ -50,8 +58,8 @@ public class Problem_15_BSTtoDoubleLinkedList_me {
         if (head == null){
             return null;
         }
-        Node leftE = process(head.left);
-        Node rightE = process(head.right);
+        Node leftE = process(head.left); //左半部分的尾节点
+        Node rightE = process(head.right); //右半部分的尾节点
         Node leftS = leftE != null ? leftE.right : null;
         Node rightS = rightE != null ? rightE.right : null;
         if (leftE != null && rightE != null){
