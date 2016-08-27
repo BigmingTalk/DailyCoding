@@ -2,6 +2,11 @@ package chapter_2_listproblem_me;
 
 /**
  * Created by bigming on 16/8/27.
+ *
+ * 题目: 单链表的选择排序,要求额外空间复杂度为O(1)
+ * 难度: *
+ * 思路: 关键在于第一个找到的最小的就是头节点,以及找到最小的节点的前一个节点.
+ *
  */
 public class Problem_16_ListSelectionSort_me {
     public static class Node{
