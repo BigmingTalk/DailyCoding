@@ -2,6 +2,11 @@ package chapter_2_listproblem_me;
 
 /**
  * Created by bigming on 16/8/28.
+ *
+ * 题目: 合并两个有序的单链表
+ * 难度: *
+ * 思路: 比较大小,用一个pre指针指向较小的那一个,然后让链表2的节点不断插入到链表1中.
+ *
  */
 public class Problem_19_MergeTwoLinkedLists_me {
     public static class Node{
