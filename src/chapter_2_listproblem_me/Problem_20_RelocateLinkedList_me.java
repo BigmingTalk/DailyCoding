@@ -2,6 +2,12 @@ package chapter_2_listproblem_me;
 
 /**
  * Created by bigming on 16/8/28.
+ *
+ * 题目: 按照左右半区的方式重新组合单链表
+ * 难度: *
+ * 思路: 先把链表分为左右两个半区,然后就是合并了,思路很简单.注意一些细节,
+ *      比如分出来的时候要让左半区的尾节点指向null.
+ *
  */
 public class Problem_20_RelocateLinkedList_me {
     public static class Node{
