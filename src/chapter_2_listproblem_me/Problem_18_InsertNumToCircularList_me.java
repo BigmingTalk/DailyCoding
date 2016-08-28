@@ -2,6 +2,11 @@ package chapter_2_listproblem_me;
 
 /**
  * Created by bigming on 16/8/28.
+ *
+ * 题目: 向有序的环形链表中插入新节点.
+ * 难度: *
+ * 思路: 主要问题是如果插入的数值是最小的或者是最大的,需要在头和尾之间插入.
+ *
  */
 public class Problem_18_InsertNumToCircularList_me {
     public static class Node{
