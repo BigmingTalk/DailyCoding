@@ -15,44 +15,44 @@ public class Problem_01_PreInPosTraversal_me {
         }
     }
 
-    public void preOrderRecur(Node head){
+    public static void preOrderRecur(Node head){
         if (head == null){
             return;
         }
 
-        System.out.println(head.value + " ");
+        System.out.print(head.value + " ");
         preOrderRecur(head.left);
         preOrderRecur(head.right);
     }
 
-    public void inOrderRecur(Node head){
+    public static void inOrderRecur(Node head){
         if (head == null){
             return;
         }
 
         inOrderRecur(head.left);
-        System.out.println(head.value + " ");
+        System.out.print(head.value + " ");
         inOrderRecur(head.right);
     }
 
-    public void posOrderRecur(Node head){
+    public static void posOrderRecur(Node head){
         if (head ==  null){
             return;
         }
 
-        inOrderRecur(head.left);
-        inOrderRecur(head.right);
-        System.out.println(head.value + " ");
+        posOrderRecur(head.left);
+        posOrderRecur(head.right);
+        System.out.print(head.value + " ");
     }
 
-    public void preOrderUnRecur(Node head){
-        System.out.println("pre-order: ");
+    public static void preOrderUnRecur(Node head){
+        System.out.print("pre-order: ");
         if (head != null){
             Stack<Node> stack = new Stack<Node>();
             stack.push(head);
             while (!stack.isEmpty()){
                 Node node = stack.pop();
-                System.out.println(node.value + " ");
+                System.out.print(node.value + " ");
                 if (node.right != null){
                     stack.push(node.right);
                 }
@@ -64,8 +64,8 @@ public class Problem_01_PreInPosTraversal_me {
         System.out.println();
     }
 
-    public void inOrderUnRecur(Node head){
-        System.out.println("in-order: ");
+    public static void inOrderUnRecur(Node head){
+        System.out.print("in-order: ");
         if (head != null){
             Stack<Node> stack = new Stack<Node>();
             while (!stack.isEmpty() || head != null){
@@ -74,7 +74,7 @@ public class Problem_01_PreInPosTraversal_me {
                     head = head.left;
                 }else{
                     head = stack.pop();
-                    System.out.println(head.value + " ");
+                    System.out.print(head.value + " ");
                     head = head.right;
                 }
             }
@@ -83,8 +83,8 @@ public class Problem_01_PreInPosTraversal_me {
     }
 
 
-    public void posOrderUnRecur1(Node head){
-        System.out.println("pos-order: ");
+    public static void posOrderUnRecur1(Node head){
+        System.out.print("pos-order: ");
         if (head != null){
             Stack<Node> s1 = new Stack<Node>();
             Stack<Node> s2 = new Stack<Node>();
@@ -106,21 +106,21 @@ public class Problem_01_PreInPosTraversal_me {
         System.out.println();
     }
 
-    public void posOrderUnRecur2(Node head){
-        System.out.println("pos-order: ");
-        if (head != null){
+    public static void posOrderUnRecur2(Node cur){
+        System.out.print("pos-order: ");
+        if (cur != null){
             Stack<Node> stack = new Stack<Node>();
-            stack.push(head);
-            Node cur = null;
+            stack.push(cur);
+            Node head = null;
             while (!stack.isEmpty()){
-                cur = stack.peek();
-                if (cur.left != null && head != cur.left && head != cur.right){
-                    stack.push(cur.left);
-                }else if (cur.right != null && head != cur.right){
-                    stack.push(cur.right);
+                head = stack.peek();
+                if (head.left != null && cur != head.left && cur != head.right){
+                    stack.push(head.left);
+                }else if (head.right != null && cur != head.right){
+                    stack.push(head.right);
                 }else {
                     System.out.print(stack.pop().value + " ");
-                    head = cur;
+                    cur = head;
                 }
             }
         }
@@ -128,6 +128,39 @@ public class Problem_01_PreInPosTraversal_me {
     }
 
 
+    public static void main(String[] args) {
+        Node head = new Node(5);
+        head.left = new Node(3);
+        head.right = new Node(8);
+        head.left.left = new Node(2);
+        head.left.right = new Node(4);
+        head.left.left.left = new Node(1);
+        head.right.left = new Node(7);
+        head.right.left.left = new Node(6);
+        head.right.right = new Node(10);
+        head.right.right.left = new Node(9);
+        head.right.right.right = new Node(11);
+
+        // recursive
+        System.out.println("==============recursive==============");
+        System.out.print("pre-order: ");
+        preOrderRecur(head);
+        System.out.println();
+        System.out.print("in-order: ");
+        inOrderRecur(head);
+        System.out.println();
+        System.out.print("pos-order: ");
+        posOrderRecur(head);
+        System.out.println();
+
+        // unrecursive
+        System.out.println("============unrecursive=============");
+        preOrderUnRecur(head);
+        inOrderUnRecur(head);
+        posOrderUnRecur1(head);
+        posOrderUnRecur2(head);
+
+    }
 
 
 
