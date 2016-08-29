@@ -34,8 +34,8 @@ public class Problem_19_MergeTwoLinkedLists_me {
             }else{
                 next = cur2.next;
                 pre.next = cur2;
-                cur2.next = cur1;
-                pre = cur2;
+                cur2.next = cur1; // 这里是为了让pre的指针指向cur1
+                pre = cur2; // 这里是为了让pre的指针指向cur1
                 cur2 = next;
             }
         }
