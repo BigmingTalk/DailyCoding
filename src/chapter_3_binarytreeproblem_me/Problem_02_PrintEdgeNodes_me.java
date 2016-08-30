@@ -2,6 +2,12 @@ package chapter_3_binarytreeproblem_me;
 
 /**
  * Created by bigming on 16/8/30.
+ * 题目: 逆时针打印二叉树的边界节点,
+ * 难度: **
+ * 要求: 两种标准:
+ *      第一种标准: 每层的最左最右节点以及叶子节点为边界
+ *      第二种标准: 头,业节点以及树左边界延伸下去的路径为边界节点,
+ *                树右边界延伸下去的路径为边界节点
  *
  */
 public class Problem_02_PrintEdgeNodes_me {
