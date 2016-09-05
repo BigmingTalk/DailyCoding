@@ -5,6 +5,13 @@ import java.util.Map;
 
 /**
  * Created by bigming on 16/9/5.
+ * 题目: 找到二叉树中符合搜索二叉树条件的最大拓扑结构
+ * 难度: ***
+ * 思路: 这里不要求是一颗子树,这也是与上一题的区别.
+ *      方法一: 对于以任何一个节点为head的树中,找到符合搜索二叉树条件的
+ *             最大结构,然后对树的每一个节点都遍历,时间复杂度为O(N^2)
+ *      方法二: 用拓扑贡献记录来做,从小树的记录整合成大树的记录,相当于利用
+ *             二叉树的后序遍历.时间复杂度为O(NlogN).
  */
 public class Problem_08_BiggestBSTTopologyInTree_me {
     public static class Node{
