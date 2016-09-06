@@ -6,6 +6,14 @@ import java.util.Queue;
 
 /**
  * Created by bigming on 16/9/6.
+ * 题目: 二叉树的按层打印与ZigZag打印
+ * 难度: **
+ * 思路: 按层就是宽度优先,这里额外的要求是每一层输出,所以要判断每一层最后
+ *      的节点,方法就是不断地赋值就好了
+ *      ZigZag只需要改变一下结构,从左到右和从右到左分别从对头和队尾加入,
+ *      并且加入的顺序也分别是左子树右子树和右子树左子树.判断一层最尾的方法
+ *      是下一层最后打印的节点时当前层有孩子的节点中最先加入双端队列的节点.
+ *
  */
 public class Problem_09_PrintBinaryTreeByLevelAndZigZag_me {
     public static class Node{
