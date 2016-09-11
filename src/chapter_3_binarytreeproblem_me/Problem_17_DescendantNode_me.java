@@ -2,6 +2,16 @@ package chapter_3_binarytreeproblem_me;
 
 /**
  * Created by bigming on 16/9/11.
+ * 题目: 在二叉树中找到一个节点的后继节点, 在这里节点有parent节点,
+ *      后继节点指的是中序遍历的序列中node的下一个节点
+ * 难度: **
+ * 思路: 如果node节点有右子树,则右子树最左边的就是
+ *      如果node没有右子树,要先看node是不是node父节点的左孩子,如果是,
+ *      那么node父节点就是node的后继节点,如果是右孩子,就向上寻找node
+ *      的后继几点,假设向上移动的节点为s,s的父节点为p,如果发现s是p的左孩子,
+ *      那么节点p就是node节点的后继节点,否则一直向上移动直到为空,则node根本
+ *      不存在后继节点.
+ *
  */
 public class Problem_17_DescendantNode_me {
     public static class Node{

@@ -5,6 +5,14 @@ import java.util.Queue;
 
 /**
  * Created by bigming on 16/9/9.
+ * 题目: 判断一棵二叉树是否为搜索二叉树和完全二叉树
+ * 难度: *
+ * 思路: 判断二叉树可以用中序遍历,看遍历的时候节点值是否递增即可.这里用的是
+ *      Morris遍历
+ *      判断是否为完全二叉树,可以按层遍历,如果当前节点有右孩子没有左孩子,
+ *      返回false,如果当前节点不是左右孩子全有,那之后节点必须都为叶节点,
+ *      否则返回false,如果遍历过程纵横不返回false,直接返回true.
+ *
  */
 public class Problem_15_IsBSTAndCBT_me {
     public static class Node{

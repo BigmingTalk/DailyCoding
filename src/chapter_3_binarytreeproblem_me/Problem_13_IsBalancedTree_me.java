@@ -4,7 +4,13 @@ import java.util.SimpleTimeZone;
 
 /**
  * Created by bigming on 16/9/9.
- *
+ * 题目: 判断二叉树是否为平衡二叉树
+ * 难度: *
+ * 思路: 平衡二叉树为要么是一棵空树,要么任何一个节点的左右子树高度差的绝对值
+ *      不超过1.给定一棵二叉树的头结点head,判断这棵二叉树是否为平衡二叉树.
+ *      可以采用后续遍历的思路,在遍历的过程中搜集两个信息,即node的左子树
+ *      是否为平衡二叉树以及最深到哪一层,以及node的右子树是否为平衡二叉树以及
+ *      最深到哪一层.
  */
 public class Problem_13_IsBalancedTree_me {
     public static class Node{

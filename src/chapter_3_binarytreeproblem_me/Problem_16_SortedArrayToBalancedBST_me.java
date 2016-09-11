@@ -2,6 +2,10 @@ package chapter_3_binarytreeproblem_me;
 
 /**
  * Created by bigming on 16/9/9.
+ * 题目: 通过有序数组生成平衡搜索二叉树
+ * 难度: *
+ * 思路: 找中间的数作为二叉树的头结点,然后用这个数左边的树生成左子树,
+ *      用右边的数生成右子树即可.
  */
 public class Problem_16_SortedArrayToBalancedBST_me {
     public static class Node{

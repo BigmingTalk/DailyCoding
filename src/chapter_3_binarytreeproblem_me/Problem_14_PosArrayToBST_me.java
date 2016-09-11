@@ -2,6 +2,11 @@ package chapter_3_binarytreeproblem_me;
 
 /**
  * Created by bigming on 16/9/9.
+ * 题目: 判断数组arr是否可能是节点值类型为整型的搜索二叉树后序
+ *      遍历的结果,如果可能是,根据后序数组重建搜索二叉树(没有重复值)
+ * 难度: *
+ * 思路: 后序遍历只需要取最后一个节点为父节点即可.
+ *
  */
 public class Problem_14_PosArrayToBST_me {
     public static boolean isPostArray(int[] array){
