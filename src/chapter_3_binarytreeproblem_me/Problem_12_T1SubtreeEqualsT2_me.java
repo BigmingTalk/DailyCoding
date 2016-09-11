@@ -2,6 +2,14 @@ package chapter_3_binarytreeproblem_me;
 
 /**
  * Created by bigming on 16/9/8.
+ * 题目: 判断t1树中是否有与t2树拓扑结构完全相同的子树
+ * 难度: ***
+ * 思路: 假设t1的节点为N,t2的节点为M
+ *      第一种方法时间复杂度为O(M*N),即对于t1的每棵子树,都去判断是否与t2
+ *      树的拓扑结构完全一样
+ *      第二种方法是先将t1树与t2树按照先序遍历的方式序列化,然后只要判断是不是
+ *      子串即可.可以采用KMP算法,时间复杂度是O(M+N)
+ *
  */
 public class Problem_12_T1SubtreeEqualsT2_me {
     public static class Node{
