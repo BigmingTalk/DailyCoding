@@ -5,6 +5,10 @@ import java.util.LinkedList;
 
 /**
  * Created by bigming on 16/9/13.
+ * 题目: Tarjan算法与并查集解决二叉树节点间最近公共祖先的批量查询问题
+ * 难度: ***
+ * 思路: 用queryMap让我们迅速查到有哪些节点和a之间有查询任务,如果能够得到答案,
+ *      indexMap还能告诉我们把答案放在ans的什么位置.
  *
  */
 public class Problem_19_TarjanAndDisjointSetsForLCA_me {
