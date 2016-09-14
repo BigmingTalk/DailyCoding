@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 /**
  * Created by bigming on 16/9/14.
+ * 题目: 分别根据前中后三种序的两种恢复树
+ * 难度: ***
+ * 思路: 前后恢复树较难,要考虑是否能恢复,恢复是否唯一等
  */
 public class Problem_21_PreInPosArrayToTree_me {
     public static class Node{

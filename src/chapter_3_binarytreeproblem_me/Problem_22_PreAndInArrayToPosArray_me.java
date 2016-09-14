@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 /**
  * Created by bigming on 16/9/14.
+ * 题目: 通过先序和中序数组生成后序数组
+ * 难度: *
+ * 思路: 和生成树的思路是一样的,不过就是把结果填入到数组中.
  */
 public class Problem_22_PreAndInArrayToPosArray_me {
     public static int[] getPosArray(int[] pre, int[] in){
