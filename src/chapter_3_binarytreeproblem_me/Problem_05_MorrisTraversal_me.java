@@ -2,6 +2,11 @@ package chapter_3_binarytreeproblem_me;
 
 /**
  * Created by bigming on 16/9/1.
+ * 题目: 该题为Morris遍历二叉树,其要求额外空间复杂度为O(1)
+ * 难度: ****
+ * 思路: 其思路是利用二叉树中很多的空指针,完成二叉树从下层到
+ *      上层的跳转,而不是利用栈进行跳转.
+ *
  */
 public class Problem_05_MorrisTraversal_me {
     public static class Node{
