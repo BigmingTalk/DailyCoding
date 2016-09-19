@@ -119,7 +119,7 @@ public class Problem_18_LowestCommonAncestor_me {
             if (n == null){
                 return;
             }
-            map.get(n).put(h, h);
+            map.get(n).put(h, h); // n与h的最近公共祖先为h
             headRecord(n.left, h);
             headRecord(n.right, h);
         }
@@ -129,8 +129,11 @@ public class Problem_18_LowestCommonAncestor_me {
                 return;
             }
             preLeft(head.left, head.right, head);
-            subRecord(head.left);
-            subRecord(head.right);
+
+            // 下面两句是多余的,因为在setMap方法中已经递归了,
+            // 当然也可以在这里递归而不是在setMap方法中递归
+            //subRecord(head.left);
+            //subRecord(head.right);
         }
 
         private void preLeft(Node l, Node r, Node h){
