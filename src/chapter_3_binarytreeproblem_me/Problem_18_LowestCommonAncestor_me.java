@@ -109,8 +109,12 @@ public class Problem_18_LowestCommonAncestor_me {
             //h所有的后代节点和h节点的最近公共祖先都是h
             headRecord(head.left, head);
             headRecord(head.right, head);
+
             // h左子树每个节点和h右子树每个节点的最近公共祖先都是h
             subRecord(head);
+
+            //这里可以与subRecord中选择一个递归即可,原题中两个都递归
+            //只是会重复设置.
             setMap(head.left);
             setMap(head.right);
         }
