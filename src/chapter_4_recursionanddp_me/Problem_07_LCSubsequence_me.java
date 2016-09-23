@@ -10,7 +10,7 @@ package chapter_4_recursionanddp_me;
  *      与str2[0..j]的最长公共子序列的长度.
  *
  */
-public class Problem_07_LCSSubsequence_me {
+public class Problem_07_LCSubsequence_me {
     public static int[][] getdp(char[] str1, char[] str2){
         int[][] dp = new int[str1.length][str2.length];
         dp[0][0] = str1[0] == str2[0] ? 1 : 0;
