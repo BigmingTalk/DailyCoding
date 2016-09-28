@@ -19,6 +19,8 @@ public class Problem_01_IsDeformation_me {
         for (int i = 0; i < chas1.length; i++){
             map[chas1[i]]++;
         }
+
+        //长度相等,所以如果str1在哪一个字符多了,str1也一定会在哪一个字符少了
         for (int i = 0; i < chas2.length; i++){
             if (map[chas2[i]]-- == 0){
                 return false;
