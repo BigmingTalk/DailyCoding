@@ -16,7 +16,7 @@ package chapter_5_stringproblem_me;
  * 难度: *
  *
  */
-public class Problem_10_ModifyAndReplace {
+public class Problem_10_ModifyAndReplace_me {
     public static void replace(char[] chas){
         if (chas == null || chas.length == 0){
             return;
