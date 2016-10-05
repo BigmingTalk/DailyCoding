@@ -15,6 +15,7 @@ import chapter_1_stackandqueue.Problem_04_DogCatQueue;
  *      变量过程中,假设a为最近一次出现str[i]的位置,主要的逻辑判断就是a与pre的
  *      大小关系,也就是前一个字符的最近重复字符与当前字符的最近重复字符谁更近一些,
  *      并根据其改变pre.
+ * 难度: **
  */
 public class Problem_18_LongestNoRepeatSubstring_me {
     public static int maxUnique(String str){
