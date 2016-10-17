@@ -13,6 +13,7 @@ import java.util.Map;
  *      数,打印提示信息.
  * 要求: 原问题时间复杂度为O(N),额外空间复杂度为O(1).进阶问题要求时间复杂度为O(N*K),额
  *      外空间复杂度为O(K).
+ * 难度: ***
  *
  */
 public class Problem_06_FindKMajority_me {
