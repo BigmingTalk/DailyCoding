@@ -5,7 +5,7 @@ package chapter_8_arrayandmatrix_me;
  * 题目: 给定一个N x N的矩阵matrix,在这个矩阵中,只有0和1两种值,
  *      返回边框全是1的最大正方形的边长长度.
  * 难度: **
- * 思路:
+ * 思路: 用right和down数组统计其开始向右和向下一共有多少个连续的1
  */
 public class Problem_21_MaxOneBorderSize_me {
 
