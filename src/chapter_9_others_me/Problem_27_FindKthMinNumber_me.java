@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 /**
  * Created by bigming on 16/11/22.
+ * 题目: 在两个排序数组中找到第K小的数
+ *      给定两个有序数组arr1和arr2, 再给定一个整数k, 返回所有数中
+ *      第k小的数.
+ * 要求: 如果arr1的长度为N, arr2的长度为M, 时间复杂度要达到O(log(min(M,N))).
+ *      额外空间复杂度为O(1).
+ * 难度: ****
  */
 public class Problem_27_FindKthMinNumber_me {
     public static int findKthNum(int[] arr1, int[] arr2, int kth) {
