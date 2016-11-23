@@ -54,6 +54,7 @@ public class Problem_29_TopKTimes1_me {
         }
 
         // 把小根堆的所有元素按词频从大到小排序
+        // 每一次都把0位置最小的元素放到最后面去
         for (int i = index - 1; i != 0; i--) {
             swap(heap, 0, i);
             heapify(heap, 0, i);
@@ -127,7 +128,7 @@ public class Problem_29_TopKTimes1_me {
 
     public static void main(String[] args) {
         String[] arr = generateRandomArray(50, 10);
-        int topK = 3;
+        int topK = 10;
         printArray(arr);
         printTopKAndRank(arr, topK);
 
